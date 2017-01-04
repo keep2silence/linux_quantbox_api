@@ -1,8 +1,8 @@
-CPPFLAGS=-g -c -std=c++11
+CPPFLAGS=-g -std=c++11 -shared -fPIC
 
 OBJS=XApiC.o XApiCpp.o XApiImpl.o
 
-all: ${OBJS}
-
+libQuantBox_XAPI.so: ${OBJS}
+	g++ ${CPPFLAGS} -o ../lib/$@ $^
 clean:
 	rm -f *.o

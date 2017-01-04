@@ -1,7 +1,9 @@
 #include <iostream>
 #include <time.h>
 #include <string.h>
+#include "include/ApiEnum.h"
 #include "include/XApiCpp.h"
+#include <stdio.h>
 
 class CXSpiImpl :public CXSpi
 {
@@ -200,9 +202,9 @@ int main(int argc, char* argv[])
 		"/home/dht/QuantBox_XAPI/include/CTP/linux64/libthosttraderapi.so");
 #endif
 	CXApi *pquot_api = CXApi::CreateApi (
-		"/home/dht/QuantBox_XAPI/lib/libQuantBox_CTP_Quote.so");
+		"/home/dht/linux_quantbox_api/lib/libQuantBox_CTP_Quote.so");
 	CXApi *ptrade_api = CXApi::CreateApi (
-		"/home/dht/QuantBox_XAPI/lib/libQuantBox_Trade_Quote.so");
+		"/home/dht/linux_quantbox_api/lib/libQuantBox_Trade_Quote.so");
 
 	if (pquot_api)
 	{
